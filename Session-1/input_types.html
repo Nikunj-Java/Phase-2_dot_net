@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Types</title>
+    <!--css-->
+    <style>
+        .myForm{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 0.8em;
+            width: 20em;
+            padding:1em;
+            border: 1px solid #ccc;
+        }
+        .myForm *{
+            box-sizing: border-box;
+        }
+
+        .myForm fieldset{
+            border: none;
+            padding: 0;
+        }
+
+        .myForm legend, .myForm label{
+            padding: 0;
+            font-weight: normal;
+        }
+        .myForm input[type="text"],
+        .myForm input[type="tel"],
+        .myForm input[type="email"],
+        .myForm input[type="datetime-local"],
+        .myForm select,
+        .myForm textarea {
+            display: block;
+            width: 100%;
+            border: 1px solid #ccc;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 0.9em;
+            padding: 0.3em;
+        }
+        .myForm textarea{
+            height: 100px;
+        }
+
+        .myForm button {
+            padding: 1em;
+            border-radius: 0.5em;
+            background: #eee;
+            border: none;
+            font-weight: bold;
+            margin-top: 1em;
+        }
+        .myForm button:hover{
+            background: #ccc;
+            cursor: pointer;
+        }
+    </style>
+    <!--css ends here-->
+</head>
+
+<body>
+<form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/First.html">
+
+    <p>
+        <label>Name <input type="text" name="Customer name" required></label>
+    </p>
+
+    <p>
+        <label>Phone <input type="tel" name="Phonr Number" required></label>
+    </p>
+
+    <p>
+        <label>Email <input type="email" name="Email Address" required></label>
+    </p>
+
+    <fieldset>
+        <legend> Which taxi do yo require?</legend>
+        <p><label class="choice"><input type="radio" name="taxi" required value="car">Car</label></p>
+        <p><label class="choice"><input type="radio" name="taxi" required value="van">Van</label></p>
+        <p><label class="choice"><input type="radio" name="taxi" required value="tuktuk">Tuk Tuk</label></p>
+
+
+    </fieldset>
+
+
+    <fieldset>
+        <legend> Extras </legend>
+        <p><label class="choice"><input type="checkbox" name="extras" value="baby">Baby</label></p>
+        <p><label class="choice"><input type="checkbox" name="extras" value="wheelchair">Wheelchair</label></p>
+        <p><label class="choice"><input type="checkbox" name="extras" value="tip">Stock Tip</label></p>
+
+    </fieldset>
+
+    <p><label> Pickup Date/Time<input type="datetime-local" name="pickup_time" required></label></p>
+    <p><label> Pickup Place
+        
+        <select id="pickup_place" name="pickup_place">
+            <option value="selected">Select one</option>
+            <option value="office">Taxi Office</option>
+            <option value="town_hall">Town Hall</option>
+            <option value="telephony">We'll Guess!</option>
+        </select>
+    </label></p>
+
+    <p><label>Dropoff Place <input type="text" name="dropoff_place" required list="destinations"></label></p>
+    <datalist id="destinations">
+        <option value="Airport">
+        <option value="Beach">
+        <option value="Gateway of india">
+    </datalist>
+
+    <p><label>Special Instructions <textarea name="comments" maxlength="500"></textarea></label></p>
+
+    <p><button>Submit Booking</button></p>
+</form>
+  
+</body>
+</html>
