@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+
+
+<style>
+    h2{
+        width: 300px;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid black;
+    }
+
+    h2#myDiv{
+        -ms-transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg);
+    }
+
+    div{
+        width: 300px;
+        height: 100px;
+        background-color: blue;
+        border: 1px solid black;
+        transform: translate(10px,20px);
+        color: white;
+    }
+    div#ds{
+        width: 300px;
+        height:100px;
+        border:1px solid black;
+        transform: skew(10deg,10deg);
+        color: white;
+}
+</style>
+</head>
+<body>
+
+
+    <h1>The Rotate Demo</h1>
+
+    <p>The rotate() method rotates an element clockwise or counter-clockwise.</p>
+
+    <h2>This is normal Div element</h2>
+
+    <h2 id="myDiv">
+        This div element is rotated clockwise 20 degree
+    </h2>
+
+    <div> Hey... I am moved from left to 100px vertically and 50px horizontally..so glad</div>
+
+    <br>
+    <br>
+
+
+    <div id="ds"> Hey i just got skewed and scaled ...its weird.!!</div>
+
+    
+</body>
+</html>
