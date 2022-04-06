@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Demo</title>
+</head>
+<body>
+    
+    <h1>Function Demo</h1>
+    <script>
+        //simple function
+         function display(){
+            console.log("Simple Display function executed");
+        }
+
+        display(); 
+
+        //iife function- immediately invoked function
+        //()();(write function here)(this is used for calling the function immediately);
+
+        (function display(){
+            console.log("iife Display function executed");
+        })();
+
+        //parametrized function
+        function myFunction(a,b){
+            var num1=a+b;//3+5=8
+            var num2=a*b;//3*5=15
+            return num1+num2; //8+15=23
+        }
+
+        function add(a,b){
+            return a+b;
+        }
+
+
+        //function calling         
+        console.log("MyFunction :"+myFunction(3,5));
+        
+        
+        var result=add(3,5);
+        console.log(`Result is : ${result}`);
+        console.log("Result is :"+ add(3,5));
+
+    </script>
+</body>
+</html>
